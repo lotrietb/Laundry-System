@@ -5,6 +5,7 @@ var liveLaundryApp = angular.module('liveLaundryApp', [
   'ngRoute',
   'ngMessages',
   'liveLaundryAppControllers',
+  'liveLaundryAppServices',
 ]);
 
 liveLaundryApp.config(['$routeProvider', function($routeProvider) {

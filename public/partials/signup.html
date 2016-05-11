@@ -1,24 +1,20 @@
-<div layout="column" flex id="content" role="main">
-  <md-content layout="vertical" flex id="content">
-    <div layout="row" layout-align="center center" layout-fill>
-      <md-whiteframe class="md-whiteframe-z1" layout="column" flex="70" layout-padding>
-        <md-content md-theme="docs-dark">
-          <md-input-container>
-            <label>Email</label>
-            <input ng-model="user.email">
-          </md-input-container>
-          <md-input-container>
-            <label>Password</label>
-            <input ng-model="user.password" type="password">
-          </md-input-container>
-          <md-input-container layout-align="center center">
-            <div layout="row" layout-sm="column" layout-margin>
-              <md-button class="md-raised" flex="50" flex-sm="100">Login</md-button>
-              <md-button class="md-raised md-primary" flex="50" flex-sm="100">Register</md-button>
-            </div>
-          </md-input-container>
-        </md-content>
-      </md-whiteframe>
+<div class="row">
+    <div class="col-md-4 col-md-offset-4">
+        <h2>Signup</h2>
+        <p>Welcome! If you want to sign up to our awesome service, fill this form and press on "Signup"!</p>
+
+        <hr>
+
+        <p><input type="text" class="form-control" placeholder="Name..." ng-model="name" required /></p>
+        <p><input type="text" class="form-control" placeholder="Email Address..." ng-model="email" required /></p>
+        <p><input type="password" class="form-control" placeholder="Password..." ng-model="password" required /></p>
+
+        <hr>
+
+        <p><button type="button" class="btn btn-success form-control" ng-click="signup()">Signup</button></p>
+
+        <hr>
+
+        <p><a href="#login">Already signed up? <b>Log in!</b></a></p>
     </div>
-  </md-content>
 </div>
