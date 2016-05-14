@@ -8,6 +8,7 @@
         <title>Live Laundry</title>
 
         <link href="bower_components/angular-material/angular-material.min.css" rel="stylesheet">
+        <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
         <style>
@@ -32,6 +33,7 @@
 
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
         <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="bower_components/angular-animate/angular-animate.js"></script>
         <script src="bower_components/angular-aria/angular-aria.js"></script>
         <script src="bower_components/lodash/lodash.js"></script>
@@ -42,7 +44,7 @@
         <script src="bower_components/angular-material/angular-material.min.js"></script>
 
         <script src="js/app.js"></script>
-        <script src="js/controllers.js"></script>
         <script src="js/services.js"></script>
+        <script src="js/controllers.js"></script>
     </body>
 </html>

@@ -14,11 +14,6 @@ $api->version('v1', function ($api) {
 		return \App\User::all();
     }]);
 
-	// example of free route
-	$api->get('free', function() {
-		return \App\User::all();
-	});
-
   $api->group(['middleware' => 'api.auth'], function ($api) {
     $api->post('pickup/store', 'App\Api\V1\Controllers\LaundryPickupController@store');
     $api->get('pickup', 'App\Api\V1\Controllers\LaundryPickupController@index');
