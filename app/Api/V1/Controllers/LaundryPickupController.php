@@ -30,7 +30,6 @@ class LaundryPickupController extends Controller
         $currentUser = JWTAuth::parseToken()->authenticate();
 
         $pickup = new LaundryPickup;
-
         $pickup->pickup_datetime = $request->get('pickup_datetime');
         $pickup->address = $request->get('address');
         $pickup->location = $request->get('location');

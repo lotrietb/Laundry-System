@@ -102,7 +102,7 @@ liveLaundryAppServices.factory('laundryService', ['Restangular', 'userService', 
 
     function create(data, onSuccess, onError){
 
-        Restangular.all('api/pickup').post(data).then(function(response){
+        Restangular.all('api/pickup/store').post(data).then(function(response){
 
             onSuccess(response);
 

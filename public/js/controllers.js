@@ -48,11 +48,18 @@ liveLaundryAppControllers.controller('MainController', ['$scope', '$http', '$loc
           $location.path('/login');
       }
 
-      $scope.refresh = function(){
+      $scope.create = function(){
+          console.log($scope);
+          return;
+          laundryService.create({
+              pickup_datetime: $scope.pickup_datetime,
+              address: $scope.address,
+              location: $scope.location
+          }, function(){
 
-          laundryService.getAll(function(response){
-
-              $scope.pickups = response;
+              $('#addPickupModal').modal('toggle');
+              $scope.currentPickupReset();
+              $scope.refresh();
 
           }, function(){
 
@@ -62,10 +69,31 @@ liveLaundryAppControllers.controller('MainController', ['$scope', '$http', '$loc
 
       }
 
+      $scope.refresh = function(){
+
+          laundryService.getAll(function(response){
+              
+              $scope.pickups = response;
+          
+          }, function(){
+              
+              alert('Some errors occurred while communicating with the service. Try again later.');
+          
+          });
+
+      }
+
+      $scope.currentPickupReset = function(){
+          $scope.pickup_datetime = '';
+          $scope.address = '';
+          $scope.location = '';
+      }
+
       if(!userService.checkIfLoggedIn())
           $location.path('/login');
 
-      $scope.pickups = [];
+      $scope.books = [];
 
+      $scope.currentPickupReset();
       $scope.refresh();
 }]);

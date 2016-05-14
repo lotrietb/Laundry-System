@@ -1,5 +1,5 @@
 <hr>
-<div class="pull-left"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#addBookModal">+ Add Pickup</button></div>
+<div class="pull-left"><button type="button" class="btn btn-success" data-toggle="modal" data-target="#addPickupModal">+ Add Pickup</button></div>
 <div class="pull-right"><button type="button" class="btn btn-info" ng-click="logout()">Logout!</button></div>
 
 <div class="clearfix"></div>
@@ -17,7 +17,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="addBookModal">
+<div class="modal fade" id="addPickupModal">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -25,9 +25,9 @@
         <h4 class="modal-title">Add a Pickup</h4>
       </div>
       <div class="modal-body">
-        <p><input class="form-control" ng-model="currentBookTitle" placeholder="Title..." type="text"></p>
-        <p><input class="form-control" ng-model="currentBookAuthorName" placeholder="Author Name..." type="text"></p>
-        <p><input class="form-control" ng-model="currentBookPagesCount" placeholder="Pages Count..." type="text"></p>
+        <p><input class="form-control" id="pickup_datetime" ng-model="pickup_datetime" placeholder="Pickup Date and Time" type="text"></p>
+        <p><input class="form-control" ng-model="address" placeholder="Address" type="text"></p>
+        <p><a class="btn btn-primary" ng-model="location">Use Current Location</a></p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -36,3 +36,10 @@
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+<script type="text/javascript">
+  $(function () {
+      $('#pickup_datetime').datetimepicker({
+        'format': 'YYYY-MM-DD HH:mm:ss' 
+      });
+  });
+</script>

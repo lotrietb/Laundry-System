@@ -9,6 +9,8 @@
 
         <link href="bower_components/angular-material/angular-material.min.css" rel="stylesheet">
         <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="bower_components/flat-ui/dist/css/flat-ui.min.css" rel="stylesheet">
+        <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet"></script>
 
 
         <style>
@@ -42,6 +44,8 @@
         <script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
         <script src="bower_components/restangular/dist/restangular.min.js"></script>
         <script src="bower_components/angular-material/angular-material.min.js"></script>
+        <script src="bower_components/moment/moment.js"></script>
+        <script src="js/bootstrap-datetimepicker.min.js"></script>
 
         <script src="js/app.js"></script>
         <script src="js/services.js"></script>
